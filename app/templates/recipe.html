@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+
+{% block title %} My Recipe List {% endblock %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="/static/css/recipe.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+<div class="row col-xs-12">
+<h1>Recipe Box</h1><h4>Add, Edit, or Delete your recipes here.</h4>
+</div>
+
+<div class="row">
+    <div class="col-xs-6" id="meal-filter">
+        <div>
+            <button type="button" id="recipes-btn-all"
+                class="btn btn-default btn-xs">All</button>
+            <button type="button" id="recipes-btn-br"
+                class="btn btn-default btn-xs">Breakfast</button>
+            <button type="button" id="recipes-btn-lu"
+                class="btn btn-default btn-xs">Lunch</button>
+            <button type="button" id="recipes-btn-din"
+                class="btn btn-default btn-xs">Dinner</button>
+            <button type="button" id="recipes-btn-snck"
+                class="btn btn-default btn-xs">Snacks</button>
+        </div>
+        <div class="panel panel-default">
+            <table class="table table-responsive">
+                <tbody id="recipe-list">
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <form action="/add-recipe" id="add-recipe-form">
+            <input type="submit" value="Add Recipe" class="btn btn-default">
+        </form>
+    </div>
+    <div class="col-xs-6" id="recipe-info">
+        <strong><p class="show-recipe-info" id="recipe-name"></p></strong>
+        <p class="show-recipe-info" id="recipe-ingredients">Ingredients: </p>
+        <form action="/edit-recipe" class="show-recipe-info"
+            method="get" id="edit-recipe-form">
+            <input type="hidden" id="recipe-id" name="recipe-id">
+            <input type="submit" value="Edit Recipe" class="btn btn-default">
+        </form>
+    </div>
+</div>
+
+</div>

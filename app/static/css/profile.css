@@ -1,0 +1,32 @@
+.block{
+    display: block;
+}
+
+.containers{
+    margin-bottom: 1%;
+}
+
+.field{
+    border-radius: 5px;
+}
+.file {
+  visibility: hidden;
+  position: absolute;
+}
+
+.pro {
+     margin: 0 auto;
+    padding: 5px;
+    width: 45%;
+    background-color: white;
+}
+
+h2{
+    text-align: center;
+  background: -webkit-linear-gradient(#5e6d00, #9e0201);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.btn btn-success{
+    color:#5e6d00;
+}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}" type="text/css" />
+
+{% endblock %}
+{% block main %}
+{% include "flash_messages.html" %}
+
+ <div class="container">  <h2 id="title">Add Profile</h2>
+ </div>
+  
+    <div class="form-container border-style">
+    
+    <form method = "POST"  enctype = "multipart/form-data" action="{{ url_for('profile') }}" class='pro'>
+        {{ form.csrf_token }}
+        <div class="container">
+            {{ form.first_name.label(class="block") }} {{ form.first_name(class="field col-md-8") }}
+        </div>
+        <div class="container">
+            {{ form.last_name.label(class="block") }} {{ form.last_name(class="field col-md-8") }}
+        </div>
+         <div class="container">
+            {{ form.username.label(class="block") }} {{ form.username(class="field col-md-8") }}
+        </div>
+        <div class="container">
+            {{ form.gender.label(class="block") }} {{ form.gender(class="field col-md-8") }}
+        </div>
+        <div class="container">
+            {{ form.DOB.label(class="block") }} {{ form.DOB(class="field col-md-8", placeholder="mm/dd/yy") }}
+        </div>
+        <div class="container">
+            {{ form.meal_preference.label(class="block") }} {{ form.meal_preference(class="field col-md-8") }}
+        </div>
+         <div class="container">
+            {{ form.password.label(class="block") }} {{ form.password(class="field col-md-8") }}
+        </div>
+         
+ 
+    <div class="container">
+        <button type="submit" class="btn btn-success">Add Profile</button>
+    </div>
+    
+</form>
+</div>
+
+{% endblock %}

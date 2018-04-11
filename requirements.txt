@@ -1,0 +1,15 @@
+# ----------------------
+# Flask
+# ----------------------
+flask
+Flask-WTF
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Script
+Flask-Login
+MySQL-python==1.2.5
+
+# ----------------------
+# Production Server
+# ----------------------
+gunicorn
